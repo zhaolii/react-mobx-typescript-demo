@@ -1,0 +1,7 @@
+/* @import '~antd/dist/antd.css'; */
+
+.hello {
+    width: 400px;
+    height: 200px;
+    border: 1px solid #eee;
+}
