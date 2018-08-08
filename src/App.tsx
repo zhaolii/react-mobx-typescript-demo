@@ -1,34 +1,32 @@
 /**
  * @file App.js
- * @author zhaoli
+ * @author denglingbo
  *
+ * 此处调用 framework 的 App.js
  */
-import React from 'react';
-import { Spin, Layout, Dropdown, Menu, Icon, Breadcrumb } from 'antd';
+import * as React from "react";
+import * as ReactDOM from "react-dom";
 import { withRouter } from 'react-router';
-import classnames from 'classnames';
+// import { Layout } from 'antd';
+import AuthLayout from './views/layout/AuthLayout';
+import LoginLayout from './views/login/LoginLayout';
+// import './style/common.scss';
+import { asyncRoutes } from './routes/index'
 
-const { Header, Content, Footer } = Layout;
-
-
-function App (...props){
-//   const { children } = props;
-
-
-    return (
-      <Layout>
-        <Header style={{ position: 'fixed', zIndex: 100, width: '100%' }}>
-          <div>智能工厂生产管理系统</div>
-        </Header>
-        <Content >
-        {/* {children} */}
-        </Content>
-        <Footer>
-          @Copyright 2018 海普智联 | 海维软件
-        </Footer>
-      </Layout>
-    )
+class App extends React.Component<any> {
+    render() {
+        const { user } = this.props;
+        console.log(user)
+        return (
+            <div>
+                {user
+                    ? <AuthLayout menu={asyncRoutes} />
+                    : <LoginLayout />
+                }
+            </div>
+        );
+    }
 }
 
-
 export default App;
+

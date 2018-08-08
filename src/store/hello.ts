@@ -1,6 +1,6 @@
 import { observable, action } from 'mobx';
 
-export default class Hello {
+export default class HelloStore {
     @observable price = 0;
     @observable defaultVal = 1;
 

@@ -6,18 +6,23 @@
 
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-// import { Provider } from 'react-redux';
 import { Provider } from 'mobx-react';
-import store from './store/index';
+import {BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import App from './App';
-import {BrowserRouter as Router, Route} from 'react-router-dom';
-import { asyncRoutes } from './routers';
+import * as store from './store';
 
-ReactDOM.render(
-  <Provider store={store}>
-    <Router>
-      <Route {...asyncRoutes}/>
-    </Router>,
-  </Provider>,
-  document.getElementById('root')
-);
+/**
+ * 启动 App
+ */
+const startApp = (data) => {
+    ReactDOM.render(
+      <Provider store={store}>
+        <Router>
+          <App user={data} />
+        </Router>
+      </Provider>,
+      document.getElementById('root')
+    );
+}
+
+startApp({});

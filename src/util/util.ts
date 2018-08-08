@@ -20,7 +20,7 @@ export const parseQuerystring = obj => {
             tmp.push(`${key}=${encodeURIComponent(v)}`)
           })
         } else {
-          tmp.push(`${key}=${encodeURIComponent(value)}`)
+          // tmp.push(`${key}=${encodeURIComponent(value)}`)
         }
       })
   

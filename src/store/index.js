@@ -1,10 +1,10 @@
 
 
-import Hello from "./hello.ts";
+import HelloStore from "./hello.ts";
 
 class Stores {
   constructor() {
-    this.hello = new Hello();
+    this.hello = new HelloStore();
   }
 }
 

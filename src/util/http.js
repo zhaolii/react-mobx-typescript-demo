@@ -76,16 +76,16 @@ export default class http {
     Object.assign(newQuery, query)
 
     // 产生一个随机数防止get请求被缓存
-    newQuery[`b${new Date().getTime()}`] = 1
+    // newQuery[`b${new Date().getTime()}`] = 1
 
-    const queryString = util.parseQuerystring(newQuery)
+    // const queryString = util.parseQuerystring(newQuery)
 
-    newUrl =
-      newUrl.indexOf('?') > 0
-        ? `${encodeURI(newUrl)}&${queryString}`
-        : `${encodeURI(newUrl)}?${queryString}`
+    // newUrl =
+    //   newUrl.indexOf('?') > 0
+    //     ? `${encodeURI(newUrl)}&${queryString}`
+    //     : `${encodeURI(newUrl)}?${queryString}`
 
-    return this.fetchData('get', newUrl, {})
+    return this.fetchData('get', url, {})
   }
 
   /**
