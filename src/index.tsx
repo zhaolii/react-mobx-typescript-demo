@@ -11,12 +11,16 @@ import {BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import App from './App';
 import * as store from './store';
 
+import { RouterStore } from "mobx-react-router";
+import { Utils } from './util';
+
+
 /**
  * 启动 App
  */
 const startApp = (data) => {
     ReactDOM.render(
-      <Provider store={store}>
+      <Provider {...store}>
         <Router>
           <App user={data} />
         </Router>

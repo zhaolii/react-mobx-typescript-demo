@@ -1,14 +1,12 @@
 /**
- * @file Route.js
- * @author denglingbo
+ * @file Route.tsx
+ * @author zhaoli
  *
  * Route 被 framework 引入，用于创建路由
  */
 
 import * as React from 'react';
-import PropTypes from 'prop-types';
 import { Switch, Route, Redirect } from 'react-router-dom';
-import { getRoutes, WithRoutes } from './routes/util';
 
 const App = (props:any) => {
     const menu = props.menu;
@@ -20,8 +18,6 @@ const App = (props:any) => {
     return (
         <Switch>
             {menu.map((route, index) => {
-                console.log(1222, route)
-                // route.component()
                 return (
                     <Route
                         key={index}

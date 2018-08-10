@@ -14,7 +14,7 @@ const asyncRoutes = [
     component: Hello,
   },
   {
-    path: '/demo',
+    path: '/hello',
     component: Hello1,
   },
   {

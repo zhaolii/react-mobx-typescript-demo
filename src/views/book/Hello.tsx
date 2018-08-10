@@ -8,7 +8,6 @@ import * as React from 'react';
 // import { withRouter } from 'react-router';
 import './hello.css'
 import { observer, inject } from 'mobx-react';
-import Hello1 from '../../components/Hello';
 
 @inject("hello")
 @observer
@@ -31,7 +30,6 @@ class Hello extends React.Component<{}, {name:string}> {
         console.log(this.props)
         return (
             <div className="hello">
-                <Hello1 />
                 <div>hi,{counter},{this.state.name}</div>
                 {/* <Button type="primary">click</Button> */}
                 <button onClick={this.handlerClick}>click</button>

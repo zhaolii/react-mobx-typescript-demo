@@ -1,6 +1,6 @@
 
 
-import HelloStore from "./hello.ts";
+import { HelloStore } from "./hello.ts";
 
 class Stores {
   constructor() {

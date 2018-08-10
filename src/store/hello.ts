@@ -1,6 +1,6 @@
 import { observable, action } from 'mobx';
 
-export default class HelloStore {
+export class HelloStore {
     @observable price = 0;
     @observable defaultVal = 1;
 
@@ -8,3 +8,4 @@ export default class HelloStore {
         this.defaultVal = event.target.value
     }
 }
+

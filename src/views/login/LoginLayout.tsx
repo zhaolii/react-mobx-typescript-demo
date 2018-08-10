@@ -1,6 +1,6 @@
 /**
  * @file LoginLayout.jsx
- * @author denglingbo
+ * @author zhaoli
  */
 import * as React from "react";
 import * as ReactDOM from "react-dom";

@@ -1,6 +1,6 @@
 /**
  * @file App.js
- * @author denglingbo
+ * @author zhaoli
  *
  * 此处调用 framework 的 App.js
  */
@@ -8,7 +8,7 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { withRouter } from 'react-router';
 // import { Layout } from 'antd';
-import AuthLayout from './views/layout/AuthLayout';
+import AuthLayout from './components/layout/AuthLayout';
 import LoginLayout from './views/login/LoginLayout';
 // import './style/common.scss';
 import { asyncRoutes } from './routes/index'
