@@ -1,7 +1,7 @@
-import Hello from '../components/Hello'
 import Hello1 from '../views/book/Hello'
 import Login from '../views/login/Login'
 import Error404 from '../views/404'
+// import AuthLayout from '/components/layout/AuthLayout';
 
 const constantRoutes = [
 
@@ -11,7 +11,6 @@ const asyncRoutes = [
   {
     path: '/',
     exact: true,
-    component: Hello,
   },
   {
     path: '/hello',
@@ -25,10 +24,10 @@ const asyncRoutes = [
     path: '/404',
     component: Error404,
   },
-//   {
-//     path: '/test',
-//     component: () => import('../views/login/LoginLayout'),
-//   },
+  // {
+  //   path: '/test',
+  //   component: () => import('../views/login/LoginLayout'),
+  // },
 
 ]
 

@@ -25,7 +25,8 @@ const App = (props:any) => {
                         path={route.path}
                         component={route.component}
                         // render={props => {
-                        //     return <route.component {...props} routes={route.routes} />
+                        //     console.log(111,props, route)
+                        //     return <route.component {...props} routes={route} />
                         // }}
                     />
                 )
