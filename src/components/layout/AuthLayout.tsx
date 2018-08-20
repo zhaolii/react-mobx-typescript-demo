@@ -8,48 +8,42 @@ import { withRouter } from 'react-router';
 import { Layout, Menu, Breadcrumb } from 'antd';
 import Route from '../../Route';
 import './layout.scss';
+import logo from '../../assets/logo.png'
 
 const { Header, Content, Footer } = Layout;
-
 class AuthLayout extends React.Component<any, {}> {
     constructor(props) {
         super(props);
     }
 
-    componentWillMount() {}
+    componentWillMount() { }
 
     render() {
         const { user, pub, menu } = this.props;
         console.log('menu', menu)
         return (
-            <Layout className="layout">
-            <Header>
-                <div className="logo" />
-                <Menu
-                    theme="dark"
-                    mode="horizontal"
-                    defaultSelectedKeys={['2']}
-                    style={{ lineHeight: '64px' }}
-                >
-                    <Menu.Item key="1">nav 1</Menu.Item>
-                    <Menu.Item key="2">nav 2</Menu.Item>
-                    <Menu.Item key="3">nav 3</Menu.Item>
-                </Menu>
-            </Header>
-            <Content style={{ padding: '0 50px' }}>
-                <Breadcrumb style={{ margin: '16px 0' }}>
-                    <Breadcrumb.Item>Home</Breadcrumb.Item>
-                    <Breadcrumb.Item>List</Breadcrumb.Item>
-                    <Breadcrumb.Item>App</Breadcrumb.Item>
-                </Breadcrumb>
-                <div style={{ background: '#fff', padding: 24, minHeight: 280 }}>
+            <Layout className="ant-layout">
+                <Header className="ant-header">
+                    <div className="logo">
+                      <img src={logo} alt="logo"/>
+                    </div>
+                    <Menu
+                        mode="horizontal"
+                    >
+                        <Menu.Item key="1">智联科技</Menu.Item>
+                        <Menu.Item key="2">智慧e盖</Menu.Item>
+                        <Menu.Item key="3">精益制造</Menu.Item>
+                        <Menu.Item key="4">信息中心</Menu.Item>
+                        <Menu.Item key="5">走近海普</Menu.Item>
+                    </Menu>
+                </Header>
+                <Content className="ant-content">
                     <Route menu={menu} />
-                </div>
-            </Content>
-            <Footer style={{ textAlign: 'center' }}>
-                footer Created by al
-            </Footer>
-        </Layout>
+                </Content>
+                <Footer className="ant-footer">
+                    Copyright © 1998 - 2018 HICAP All Rights Reserved. 海普智联 版权所有 鲁ICP备05011473号-5
+                </Footer>
+            </Layout>
         );
     }
 }

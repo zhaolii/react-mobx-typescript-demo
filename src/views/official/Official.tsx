@@ -6,12 +6,13 @@
 
 import * as React from 'react';
 // import { withRouter } from 'react-router';
-import './hello.scss'
+import './official.scss'
+import { Layout, Menu, Breadcrumb } from 'antd';
 import { observer, inject } from 'mobx-react';
 
-@inject("hello")
-@observer
-class Hello extends React.Component<{hello}, {name: string}> {
+const { Header, Content, Footer } = Layout;
+
+class Official extends React.Component<{}, {name: string}> {
     constructor() {
         super()
         this.state = {
@@ -21,16 +22,14 @@ class Hello extends React.Component<{hello}, {name: string}> {
     }
 
     render() {
-        const store = this.props.hello
         return (
-            <div className="hello">
-                <div>hi,{store.counter},{this.state.name}</div>
-                <button onClick={store.handlerChange}>click</button>
+            <div className="official">
+                
             </div>
         )
     }
 }
 
 
-export default Hello;
+export default Official;
 

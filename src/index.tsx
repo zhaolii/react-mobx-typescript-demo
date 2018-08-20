@@ -7,7 +7,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { Provider } from 'mobx-react';
-import {BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router} from 'react-router-dom';
 import App from './App';
 import store from './store';
 

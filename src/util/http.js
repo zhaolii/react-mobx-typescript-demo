@@ -4,7 +4,7 @@
  */
 
 import axios from 'axios'
-import * as util from './util'
+// import * as util from './util'
 
 // axios 配置
 axios.defaults.timeout = 10000

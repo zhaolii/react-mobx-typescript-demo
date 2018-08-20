@@ -24,10 +24,6 @@ const App = (props:any) => {
                         exact={route.exact}
                         path={route.path}
                         component={route.component}
-                        // render={props => {
-                        //     console.log(111,props, route)
-                        //     return <route.component {...props} routes={route} />
-                        // }}
                     />
                 )
             })}

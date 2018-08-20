@@ -5,23 +5,29 @@
 
 import * as React from "react";
 import { withRouter } from 'react-router';
+import ls from '../../util/localStorage'
 
-class App extends React.Component {
+class App extends React.Component<{history}> {
     constructor(props) {
         super(props);
 
     }
 
-    componentWillMount() {}
+    componentWillMount() {
 
+    }
 
+    login = () => {
+        ls.set('isLogin', true)
+        this.props.history.push('/hello')
+    }
 
     render() {
         return (
             <div>
-                <input type="text" defaultValue="admin" />
-                <input type="password" defaultValue="123456" />
-                <button>Login!!</button>
+                <input type="text"/>
+                <input type="password"  />
+                <button onClick={this.login}>Login</button>
             </div>
         )
     }

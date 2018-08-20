@@ -12,14 +12,16 @@ import AuthLayout from './components/layout/AuthLayout';
 import LoginLayout from './views/login/LoginLayout';
 // import './style/common.scss';
 import { asyncRoutes } from './routes/index'
+import ls from './util/localStorage'
 
 class App extends React.Component<any> {
     render() {
         const { user } = this.props;
+        const isLogin = ls.get('isLogin')
         console.log(user)
         return (
             <div>
-                {user
+                {isLogin
                     ? <AuthLayout menu={asyncRoutes} />
                     : <LoginLayout />
                 }

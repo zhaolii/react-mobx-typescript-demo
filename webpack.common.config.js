@@ -6,7 +6,8 @@ module.exports = {
   entry: "./src/index.tsx",
   output: {
     filename: "bundle.js",
-    path: __dirname + "/dist"
+    path: __dirname + "/dist",
+    publicPath:'/dist/'
   },
 
   devtool: "source-map",
@@ -39,6 +40,15 @@ module.exports = {
       //   test: /\.(tsx|js)$/,
       //   loader: "source-map-loader"
       // },
+      {
+        test: /\.(png|jpg|gif)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {}
+          }
+        ]
+      },
       {
         test: /\.(css|less|scss)$/,
         loader: 'style-loader!css-loader!less-loader!sass-loader'
